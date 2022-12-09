@@ -20,8 +20,8 @@ func main() {
 }
 
 func healthzHandleFunc(writer http.ResponseWriter, request *http.Request) {
-	writer.WriteHeader(200)
-	log.Println(GetIP(request), 200)
+	writer.WriteHeader(http.StatusOK)
+	log.Println(GetIP(request), http.StatusOK)
 }
 
 func defaultHandleFunc(writer http.ResponseWriter, request *http.Request) {
